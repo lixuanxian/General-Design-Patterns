@@ -1,4 +1,5 @@
-= General Design Patterns =
+General Design Patterns
+=======================
 
 This Xcode project contains an implementation for the following general design patterns:
 

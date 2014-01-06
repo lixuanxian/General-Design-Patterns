@@ -25,6 +25,7 @@
 {
 	
 }
+
 -(id)getResult
 {
 	return NULL;

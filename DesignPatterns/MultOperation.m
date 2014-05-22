@@ -34,7 +34,7 @@
     return e1*e2;
 }
 
--(NSString*)getOperatorSymbol
+-(NSString*)operatorSymbol
 {
     return @"*";
 }

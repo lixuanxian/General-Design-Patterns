@@ -30,7 +30,7 @@
     return self;
 }
 
--(double)getValue
+-(double)value
 {
     return value;
 }

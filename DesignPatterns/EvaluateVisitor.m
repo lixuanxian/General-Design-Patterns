@@ -26,9 +26,9 @@
 -(void)visitAddOperation:(OperationComposite *)op
 {
     double l, r;
-    if( [op getVisitCount] == 2) 
+    if( [op visitCount] == 2)
     {
-        if([op getParent] != nil)
+        if([op parent] != nil)
         {
             r = [(NSNumber*)[s lastObject] doubleValue];
             [s removeLastObject];
@@ -50,9 +50,9 @@
 -(void)visitSubOperation:(OperationComposite *)op
 {
     double l, r;
-    if( [op getVisitCount] == 2) 
+    if( [op visitCount] == 2)
     {
-        if([op getParent] != nil)
+        if([op parent] != nil)
         {
             r = [(NSNumber*)[s lastObject] doubleValue];
             [s removeLastObject];
@@ -74,9 +74,9 @@
 -(void)visitMultOperation:(OperationComposite *)op
 {
     double l, r;
-    if( [op getVisitCount] == 2) 
+    if( [op visitCount] == 2)
     {
-        if([op getParent] != nil)
+        if([op parent] != nil)
         {
             r = [(NSNumber*)[s lastObject] doubleValue];
             [s removeLastObject];
@@ -97,15 +97,15 @@
 
 -(void)visitLiteral:(LiteralLeaf *)lf
 {
-    [s addObject:[NSNumber numberWithDouble:[lf getValue]]];
+    [s addObject:[NSNumber numberWithDouble:[lf value]]];
 }
 
--(double)getResult
+-(double)result
 {
     return result;
 }
 
--(ExpressionEvaluateIterator*)getIterator
+-(ExpressionEvaluateIterator*)iterator
 {
     ExpressionEvaluateIterator* i = [[ExpressionEvaluateIterator alloc] init];
     [i setVisitor:self];

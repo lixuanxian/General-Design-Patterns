@@ -26,7 +26,7 @@
 	
 }
 
--(id)getResult
+-(id)result
 {
 	return NULL;
 }

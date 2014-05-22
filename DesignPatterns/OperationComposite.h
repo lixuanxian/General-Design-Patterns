@@ -19,14 +19,14 @@
 }
 
 -(id)initWithExpressionComponents:(ExpressionComponent*)e1 secondComponent:(ExpressionComponent*)e2;
--(int)getVisitCount;
+-(int)visitCount;
 -(void)incrementVisitCount;
 -(void)setLeft:(ExpressionComponent*)l;
--(ExpressionComponent*)getLeft;
+-(ExpressionComponent*)left;
 -(void)setRight:(ExpressionComponent*)r;
--(ExpressionComponent*)getRight;
+-(ExpressionComponent*)right;
 -(void)addComponent:(ExpressionComponent*)c;
--(NSString*)getOperatorSymbol;
+-(NSString*)operatorSymbol;
 -(void)accept:(ExpressionVisitor*)ov;
 
 @end

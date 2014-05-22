@@ -29,14 +29,14 @@
         OperationComposite* c = (OperationComposite*) e;
         
         [c accept:ev];
-        [self traverse:[c getLeft]];
+        [self traverse:[c left]];
         [c accept:ev];
-        [self traverse:[c getRight]];
+        [self traverse:[c right]];
         [c accept:ev];
         
     } else [(LiteralLeaf*)e accept:ev];
     
-    return [ev getResult];
+    return [ev result];
 }
 
 -(void)setVisitor:(EvaluateVisitor*)p

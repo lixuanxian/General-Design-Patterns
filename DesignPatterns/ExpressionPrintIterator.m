@@ -29,9 +29,9 @@
         OperationComposite* c = (OperationComposite*) e;
         
         [c accept:pv];
-        [self traverse:[c getLeft]];
+        [self traverse:[c left]];
         [c accept:pv];
-        [self traverse:[c getRight]];
+        [self traverse:[c right]];
         [c accept:pv];
         
     } else 
@@ -39,7 +39,7 @@
         [(LiteralLeaf*)e accept:pv];
     }
     
-    return [pv getExpression];
+    return [pv expression];
 }
 
 -(void)setVisitor:(PrintVisitor*)p

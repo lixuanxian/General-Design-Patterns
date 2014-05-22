@@ -17,7 +17,7 @@
 }
 
 -(id)initWithValue:(double)v;
--(double)getValue;
+-(double)value;
 -(void)accept:(ExpressionVisitor*)ev;
 
 @end

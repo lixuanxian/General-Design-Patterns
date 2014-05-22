@@ -22,16 +22,16 @@
     return self;
 }
 
--(NSString*)getExpression
+-(NSString*)expression
 {
     return expression;
 }
 
 -(void)visitAddOperation:(OperationComposite *)op
 {
-    int t = [op getVisitCount];
+    int t = [op visitCount];
     if(t == 0) expression = [expression stringByAppendingString:@"("];
-    else if( t == 1 ) expression = [expression stringByAppendingString:[op getOperatorSymbol]];
+    else if( t == 1 ) expression = [expression stringByAppendingString:[op operatorSymbol]];
     else if( t == 2 ) 
     {
         expression = [expression stringByAppendingString:@")"];
@@ -42,9 +42,9 @@
 
 -(void)visitSubOperation:(OperationComposite *)op
 {
-    int t = [op getVisitCount];
+    int t = [op visitCount];
     if(t == 0) expression = [expression stringByAppendingString:@"("];
-    else if( t == 1 ) expression = [expression stringByAppendingString:[op getOperatorSymbol]];
+    else if( t == 1 ) expression = [expression stringByAppendingString:[op operatorSymbol]];
     else if( t == 2 ) 
     {
         expression = [expression stringByAppendingString:@")"];
@@ -55,9 +55,9 @@
 
 -(void)visitMultOperation:(OperationComposite *)op
 {
-    int t = [op getVisitCount];
+    int t = [op visitCount];
     if(t == 0) expression = [expression stringByAppendingString:@"("];
-    else if( t == 1 ) expression = [expression stringByAppendingString:[op getOperatorSymbol]];
+    else if( t == 1 ) expression = [expression stringByAppendingString:[op operatorSymbol]];
     else if( t == 2 ) 
     {
         expression = [expression stringByAppendingString:@")"];
@@ -68,11 +68,11 @@
 
 -(void)visitLiteral:(LiteralLeaf *)lf
 {
-    NSNumber *n = [NSNumber numberWithDouble:[lf getValue]];
+    NSNumber *n = [NSNumber numberWithDouble:[lf value]];
     expression = [expression stringByAppendingString:[n stringValue]];
 }
 
--(ExpressionPrintIterator*)getIterator
+-(ExpressionPrintIterator*)iterator
 {
     ExpressionPrintIterator* i = [[ExpressionPrintIterator alloc] init];
     [i setVisitor:self];

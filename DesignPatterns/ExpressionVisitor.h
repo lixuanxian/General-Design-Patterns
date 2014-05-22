@@ -21,6 +21,6 @@
 -(void)visitSubOperation:(OperationComposite*)op;
 -(void)visitMultOperation:(OperationComposite*)op;
 -(void)visitLiteral:(LiteralLeaf*)op;
--(Iterator*)getIterator;
+-(Iterator*)iterator;
 
 @end

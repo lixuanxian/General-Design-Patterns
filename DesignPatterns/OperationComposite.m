@@ -33,7 +33,7 @@
     return self;
 }
 
--(int)getVisitCount
+-(int)visitCount
 {
     return visitCount;
 }
@@ -49,7 +49,7 @@
     left = l;
 }
 
--(ExpressionComponent*)getLeft
+-(ExpressionComponent*)left
 {
     return left;
 }
@@ -59,7 +59,7 @@
     right = r;
 }
 
--(ExpressionComponent*)getRight
+-(ExpressionComponent*)right
 {
     return right;
 }
@@ -78,7 +78,7 @@
     }
 }
 
--(NSString*)getOperatorSymbol
+-(NSString*)operatorSymbol
 {
     return @"";
 }

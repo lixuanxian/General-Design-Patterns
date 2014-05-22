@@ -18,6 +18,6 @@
 }
 
 -(void)buildSubTree:(OperationComposite*)p leftChild:(OperationComposite*)l rightChild:(OperationComposite*)r;
--(OperationComposite*)getResult;
+-(OperationComposite*)result;
 
 @end

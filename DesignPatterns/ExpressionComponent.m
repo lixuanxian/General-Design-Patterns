@@ -26,7 +26,7 @@
     parent = p;
 }
 
--(ExpressionComponent*)getParent
+-(ExpressionComponent*)parent
 {
     return parent;
 }

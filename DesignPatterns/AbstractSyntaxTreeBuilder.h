@@ -12,6 +12,6 @@
 }
 
 -(void)buildSubTree:(id)p leftChild:(id)l rightChild:(id)r;
--(id)getResult;
+-(id)result;
 
 @end

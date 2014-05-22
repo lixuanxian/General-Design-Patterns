@@ -74,7 +74,7 @@
     CompositeTopDownDirector* director = [[CompositeTopDownDirector alloc] initWithBuilder:builder];
     [director createComposite:flatTree];
     
-    ast = [builder getResult];
+    ast = [builder result];
     
     
     return ast;
@@ -83,14 +83,14 @@
 -(double)interpret
 {
     EvaluateVisitor* ev = [[EvaluateVisitor alloc] init];
-    ExpressionEvaluateIterator* i2 = [ev getIterator];
+    ExpressionEvaluateIterator* i2 = [ev iterator];
     return [i2 traverse:ast];
 }
 
 -(NSString*)print
 {
     PrintVisitor *pv = [[PrintVisitor alloc] init];
-    ExpressionPrintIterator *i3 = [pv getIterator];
+    ExpressionPrintIterator *i3 = [pv iterator];
     /*ExpressionPolishNotationIterator* i = [[ExpressionPolishNotationIterator alloc] init];*/
     NSString* res = [i3 traverse:ast];
     return res;

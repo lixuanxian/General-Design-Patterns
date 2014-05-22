@@ -41,7 +41,7 @@
     
 }
 
--(Iterator*)getIterator
+-(Iterator*)iterator
 {
     // Abstract class methods shouldn't be used
     return nil;

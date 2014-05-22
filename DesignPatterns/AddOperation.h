@@ -19,7 +19,7 @@
 
 -(id)initWithExpressionComponents:(ExpressionComponent*)e1 secondComponent:(ExpressionComponent*)e2;
 -(double) operation:(double)e1 secondValue:(double)e2;
--(NSString*)getOperatorSymbol;
+-(NSString*)operatorSymbol;
 -(void)accept:(ExpressionVisitor*)ov;
 
 @end

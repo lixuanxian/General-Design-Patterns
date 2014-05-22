@@ -15,6 +15,6 @@
 }
 
 -(void)setParent:(ExpressionComponent*)p;
--(ExpressionComponent*)getParent;
+-(ExpressionComponent*)parent;
 
 @end

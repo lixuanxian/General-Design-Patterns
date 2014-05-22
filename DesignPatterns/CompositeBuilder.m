@@ -31,11 +31,11 @@
     currentNode = p;
 }
 
--(OperationComposite*)getResult
+-(OperationComposite*)result
 {
-    while([currentNode getParent] != nil)
+    while([currentNode parent] != nil)
     {
-        currentNode = (OperationComposite*)[currentNode getParent];
+        currentNode = (OperationComposite*)[currentNode parent];
     }
     return currentNode;
 }

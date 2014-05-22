@@ -21,7 +21,7 @@
 -(void)visitSubOperation:(OperationComposite *)op;
 -(void)visitMultOperation:(OperationComposite *)op;
 -(void)visitLiteral:(LiteralLeaf *)lf;
--(NSString*)getExpression;
--(ExpressionPrintIterator*)getIterator;
+-(NSString*)expression;
+-(ExpressionPrintIterator*)iterator;
 
 @end

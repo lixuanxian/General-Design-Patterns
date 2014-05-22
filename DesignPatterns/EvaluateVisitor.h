@@ -22,7 +22,7 @@
 -(void)visitSubOperation:(OperationComposite *)op;
 -(void)visitMultOperation:(OperationComposite *)op;
 -(void)visitLiteral:(LiteralLeaf *)lf;
--(double)getResult;
--(ExpressionEvaluateIterator*)getIterator;
+-(double)result;
+-(ExpressionEvaluateIterator*)iterator;
 
 @end
